@@ -81,6 +81,7 @@ enum write_status to_bmp(FILE *output_file, struct image const *img)
   struct bmp_header *bmp_header = bmp_header_create(img);
   if (fwrite(bmp_header, sizeof(struct bmp_header), 1, output_file) != 1)
   {
+    free(bmp_header);
     return WRITE_ERROR;
   }
   uint8_t padding = get_padding(bmp_header->biWidth);
