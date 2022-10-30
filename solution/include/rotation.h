@@ -4,6 +4,6 @@
 #include "image.h"
 #include "malloc.h"
 
-struct image rotate(struct image const ource);
+struct image rotate(struct image const source);
 
 #endif

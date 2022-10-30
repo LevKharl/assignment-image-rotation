@@ -5,8 +5,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#pragma pack(push, 1)
-struct bmp_header
+struct __attribute__((packed)) bmp_header
 {
   uint16_t bfType;
   uint32_t bfileSize;
@@ -24,7 +23,6 @@ struct bmp_header
   uint32_t biClrUsed;
   uint32_t biClrImportant;
 };
-#pragma pack(pop)
 
 enum read_status
 {
@@ -41,8 +39,7 @@ enum write_status
   WRITE_ERROR
 };
 
-struct bmp_header bmp_header_create(struct image const *img);
-enum read_status bmp_header_check(const struct bmp_header *bmp_header);
+struct bmp_header *bmp_header_create(struct image const *img);
 
 enum read_status from_bmp(FILE *input_file, struct image *img);
 enum write_status to_bmp(FILE *output_file, struct image const *img);

@@ -8,7 +8,6 @@ int main(int argc, char **argv)
 {
     if (argc != 3)
     {
-        
         return 1;
     }
 
@@ -16,7 +15,7 @@ int main(int argc, char **argv)
     if (!source.data)
     {
         image_destroy(&source);
-        fprintf(stderr, "Error with converting bmp to struct image\n");
+        fprintf(stderr, "Bmp ---> image failed\n");
         return 1;
     }
 
@@ -26,7 +25,7 @@ int main(int argc, char **argv)
     if (!rotated_img.data)
     {
         image_destroy(&rotated_img);
-        fprintf(stderr, "Transformation failed\n");
+        fprintf(stderr, "Rotation failed\n");
         return 1;
     }
 

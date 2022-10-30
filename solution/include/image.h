@@ -18,6 +18,5 @@ struct pixel
 };
 
 struct pixel *get_pixel(struct image *img, uint64_t col, uint64_t row);
-uint64_t get_pixel_index(const struct image *img, uint64_t col, uint64_t row);
 
 #endif
