@@ -2,27 +2,9 @@
 #define ASSIGNMENT_IMAGE_ROTATION_BMP_H
 
 #include "../include/image.h"
+#include "../include/format.h"
 #include <stdint.h>
 #include <stdio.h>
-
-struct __attribute__((packed)) bmp_header
-{
-  uint16_t bfType;
-  uint32_t bfileSize;
-  uint32_t bfReserved;
-  uint32_t bOffBits;
-  uint32_t biSize;
-  uint32_t biWidth;
-  uint32_t biHeight;
-  uint16_t biPlanes;
-  uint16_t biBitCount;
-  uint32_t biCompression;
-  uint32_t biSizeImage;
-  uint32_t biXPelsPerMeter;
-  uint32_t biYPelsPerMeter;
-  uint32_t biClrUsed;
-  uint32_t biClrImportant;
-};
 
 enum read_status
 {
@@ -39,7 +21,7 @@ enum write_status
   WRITE_ERROR
 };
 
-struct bmp_header *bmp_header_create(struct image const *img);
+struct bmp_header bmp_header_create(struct image const *img);
 
 enum read_status from_bmp(FILE *input_file, struct image *img);
 enum write_status to_bmp(FILE *output_file, struct image const *img);

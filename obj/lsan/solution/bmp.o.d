@@ -16,7 +16,7 @@ obj/lsan/solution/bmp.o: solution/src/bmp.c solution/src/../include/bmp.h \
   /usr/include/aarch64-linux-gnu/bits/wchar.h \
   /usr/include/aarch64-linux-gnu/bits/stdint-intn.h \
   /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
-  /usr/include/stdio.h \
+  solution/include/../include/format.h /usr/include/stdio.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h \
   /usr/lib/llvm-14/lib/clang/14.0.0/include/stdarg.h \
   /usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h \
@@ -70,6 +70,8 @@ solution/include/../include/image.h:
 /usr/include/aarch64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h:
+
+solution/include/../include/format.h:
 
 /usr/include/stdio.h:
 

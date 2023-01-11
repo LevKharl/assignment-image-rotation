@@ -10,7 +10,7 @@ int main(int argc, char **argv)
     {
         return 1;
     }
-
+    
     struct image source = from_bmp_check(argv[1]);
     if (!source.data)
     {
