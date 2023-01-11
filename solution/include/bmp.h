@@ -1,8 +1,8 @@
 #ifndef ASSIGNMENT_IMAGE_ROTATION_BMP_H
 #define ASSIGNMENT_IMAGE_ROTATION_BMP_H
 
-#include "../include/image.h"
 #include "../include/format.h"
+#include "../include/image.h"
 #include <stdint.h>
 #include <stdio.h>
 
